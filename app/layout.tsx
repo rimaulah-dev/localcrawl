@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import BottomNav from "@/components/BottomNav";
 import RegisterServiceWorker from "./register-sw";
+import { Analytics } from "@vercel/analytics/next";
 
 const playfair = Playfair_Display({
   variable: "--font-heading",
@@ -51,6 +52,7 @@ export default function RootLayout({
         <RegisterServiceWorker />
         {children}
         <BottomNav />
+        <Analytics />
       </body>
     </html>
   );
