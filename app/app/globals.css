@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark Luxury Heritage Color Palette */
+  --color-navy: #0D0F1A;
+  --color-gold: #C9A84C;
+  --color-crimson: #8B1A1A;
+  --color-surface: #1A1D2E;
+  --color-ivory: #F5F3ED;
+
+  /* Typography */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Shadows */
+  --shadow-glow: 0 0 20px rgba(201, 168, 76, 0.3);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-navy);
+    color: var(--color-ivory);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Leaflet CSS overrides */
+.leaflet-container {
+  background: var(--color-navy);
+  font-family: var(--font-body);
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--color-surface);
+  color: var(--color-ivory);
+}
+
+.leaflet-popup-tip {
+  background: var(--color-surface);
+}
+
+/* Custom animations */
+@keyframes stamp-down {
+  0% {
+    transform: scale(1.5) rotate(-5deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(0.95) rotate(2deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stamp-animation {
+  animation: stamp-down 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fade-slide-up {
+  animation: fade-slide-up 0.4s ease-out;
+}
