@@ -4,7 +4,7 @@
 
 LocalCrawl turns neighboring businesses into a single walkable route. Each route runs as a mobile-first PWA with GPS guidance, QR check-ins at each stop, a passport stamp mechanic, and a real-time analytics dashboard — giving business districts something they've never had before: proof that a foot traffic campaign actually worked.
 
-> Live demo: [project-2cd5133b.doanything.app](https://project-2cd5133b.doanything.app)
+> Live demo: [localcrawl-gules.vercel.app/](https://localcrawl-gules.vercel.app/)
 
 ---
 
